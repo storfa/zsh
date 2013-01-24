@@ -1,0 +1,37 @@
+alias cls='clear'
+
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+
+#Triple monitoring in screen
+#-----------------------------
+#This command starts screen with 'htop', 'nethogs' and 'iotop' in split-screen. You have to have these three commands (of course) and specify the interface for nethogs - mine is wlan0, I could have acquired the interface from the default route extending the command but this way is simpler.
+#htop is a wonderful top replacement with many interactive commands and configuration options. nethogs is a program which tells which processes are using the most bandwidth. iotop tells which processes are using the most I/O.
+#The command creates a temporary "screenrc" file which it uses for doing the triple-monitoring. You can see several examples of screenrc files here: http://www.softpanorama.org/Utilities/Screen/screenrc_examples.shtml
+#-------------------------------------------------------------------------------
+#tmpfile=$(mktemp) && echo -e 'startup_message off\nscreen -t top htop\nsplit\nfocus\nscreen -t nethogs nethogs wlan0\nsplit\nfocus\nscreen -t iotop iotop' > $tmpfile && sudo screen -c $tmpfile
+
+# Start a file browser in the current directory
+alias explore='screen -d -m nautilus --no-desktop `pwd`'
+
+# connect to all screen instances running
+alias screena="-ls | grep pts | gawk '{ split($1, x, "."); print x[1] }' | while read i; do gnome-terminal -e screen\ -dx\ $i; done"
+
+alias sshaws="ssh -i ~/git/ec2-aws-deploy/awsdeploy_python_module/conf/awsdeploy_key.pem"
+
+alias lex="screen -c .screenrc-lex"
+alias ssheci="ssh jordonst@10.180.131.184"
+
+alias flushdns='sudo killall -HUP mDNSResponder'
+alias flush-dns='sudo killall -HUP mDNSResponder'
+
+alias tugboat='nocorrect tugboat'
