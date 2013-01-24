@@ -1,6 +1,7 @@
 
 if [[ $IS_MAC -eq 1 ]]; then
-    export EDITOR='mvim'
+#    export EDITOR='mvim'
+    export EDITOR='vim'
 else
     export EDITOR='vim'
 fi
