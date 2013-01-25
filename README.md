@@ -26,6 +26,11 @@ There is an included .zshrc file, but it will not be in your home directory so w
 it from your home directory:
         ln -s ~/.zsh/.zshrc ~/.zshrc 
 
+### Step 4 - Change your default shell
+If you haven't already, you will likely want to switch your default shell to zsh.  Depending on OS, you may need
+to log out and then back in after running this command:
+        chsh -s /bin/zsh
+
 ### Done
 That should be it.  You're done.
 
@@ -40,4 +45,4 @@ It works for me, but a make no guarantees you'll have the same success.  If not,
         zsh/install.sh
 
 ### Done
-That should be it.  You're done.
+You may need to log out and back in to complete the process.  That should be it.  You're done.
