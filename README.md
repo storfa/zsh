@@ -2,8 +2,22 @@
 
 my zsh setup
 
-Note that zsh is required and your user account is epected to be set to use the z shell.  If you are using bash,
-my zsh setup isn't going to do you much good.
+**Note that zsh must be installed (in /bin/zsh) for the steps below to work.
+
+## Scripted Install
+
+### Step 1 - Clone the repo
+There is really not much to say about this, just clone the repo.
+
+### Step 2 - Execute the install script
+Running the install script should perform all the steps necessary to get my zsh scripts up and running.
+It works for me, but a make no guarantees you'll have the same success.  If not, see the Manual Install section.
+```bash
+zsh/install.sh
+```
+
+### You're Done
+You may need to log out and back in to complete the process.  That should be it.  You're done.
 
 ## Manual Install
 
@@ -41,18 +55,3 @@ chsh -s /bin/zsh
 
 ### Done
 That should be it.  You're done.
-
-## Scripted Install
-
-### Step 1 - Clone the repo
-There is really not much to say about this, just clone the repo.
-
-### Step 2 - Execute the install script
-Running the install script should perform all the steps necessary to get my zsh scripts up and running.
-It works for me, but a make no guarantees you'll have the same success.  If not, see the Manual Install section.
-```bash
-zsh/install.sh
-```
-
-### Done
-You may need to log out and back in to complete the process.  That should be it.  You're done.
