@@ -27,5 +27,8 @@ mv ~/.zshrc ~/.zshrc.old
 # create a symlink in user home
 ln -s ~/.zsh/.zshrc ~/.zshrc 
 
+#set zsh as your default shell
+chsh -s /bin/zsh
+
 # source the new zsh file
 source ~/.zshrc
