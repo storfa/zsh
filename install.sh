@@ -10,10 +10,10 @@ function get_script_dir
 script_dir=$(get_script_dir)
 
 # change to the correct directory
-pushd "$script_dir/.."
+cd "$script_dir/.."
 
 # rename the repo directory
-mv zsh ~/.zsh
+mv zsh/ ~/.zsh/
 
 # get teh zshuery zsh shell
 git clone git://github.com/myfreeweb/zshuery.git ~/.zsh/zshuery 
@@ -21,14 +21,17 @@ git clone git://github.com/myfreeweb/zshuery.git ~/.zsh/zshuery
 # get the zsh-git-prompt
 git clone git://github.com/olivierverdier/zsh-git-prompt.git ~/.zsh/git-prompt 
 
-# rename any old .zsh file
-mv ~/.zshrc ~/.zshrc.old
+# rename existing .zsh file
+if [ -f ~/.zshrc ]
+then
+    mv ~/.zshrc ~/.zshrc.old
+fi
 
 # create a symlink in user home
 ln -s ~/.zsh/.zshrc ~/.zshrc 
 
-#set zsh as your default shell
+# set zsh as your default shell
 chsh -s /bin/zsh
 
-# source the new zsh file
-source ~/.zshrc
+# switch the current shell
+/bin/zsh
