@@ -29,7 +29,8 @@ fi
 
 # create a symlink in user home
 ln -s ~/.zsh/.zshrc ~/.zshrc 
-
+ln -s ~/.zsh/.zprofile ~/.zprofile
+ 
 # set zsh as your default shell
 chsh -s /bin/zsh
 
