@@ -32,7 +32,7 @@ ln -s ~/.zsh/.zshrc ~/.zshrc
 ln -s ~/.zsh/.zprofile ~/.zprofile
  
 # set zsh as your default shell
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 
 # switch the current shell
 /bin/zsh
