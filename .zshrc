@@ -21,3 +21,6 @@ chpwd() {
     update_terminal_cwd
 }
 
+path+=( $HOME/git/ocx/ocx-dev/scripts ) 
+
+ulimit -n 8192

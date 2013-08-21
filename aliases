@@ -12,6 +12,9 @@ alias gx='gitx --all'
 alias got='git '
 alias get='git '
 
+alias ports="netstat -lnptu"
+alias mount-exchange-ci='sshfs exchange-ci.prsn.us:/ ~/development/exchange-ci-mount'
+
 #Triple monitoring in screen
 #-----------------------------
 #This command starts screen with 'htop', 'nethogs' and 'iotop' in split-screen. You have to have these three commands (of course) and specify the interface for nethogs - mine is wlan0, I could have acquired the interface from the default route extending the command but this way is simpler.
@@ -27,6 +30,7 @@ alias explore='screen -d -m nautilus --no-desktop `pwd`'
 alias screena="-ls | grep pts | gawk '{ split($1, x, "."); print x[1] }' | while read i; do gnome-terminal -e screen\ -dx\ $i; done"
 
 alias sshaws="ssh -i $AWS_DEPLOY_KEY"
+alias scpaws="scp -i $AWS_DEPLOY_KEY"
 
 alias lex="screen -c .screenrc-lex"
 alias ssheci="ssh jordonst@10.180.131.184"
