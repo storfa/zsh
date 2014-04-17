@@ -37,4 +37,4 @@ PROMPT_SPACE=''
 # #######################################################################################
 # set the default prompts
 # #######################################################################################
-prompts '${GREEN}%~%{$reset_color%} $(virtualenv_info)$(git_super_status)%{$fg[yellow]%}$(prompt_char)%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+prompts '${GREEN}$(COLLAPSED_DIR)%{$reset_color%} $(virtualenv_info)$(git_super_status)%{$fg[yellow]%}$(prompt_char)%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
