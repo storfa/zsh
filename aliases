@@ -29,13 +29,10 @@ alias explore='screen -d -m nautilus --no-desktop `pwd`'
 # connect to all screen instances running
 alias screena="-ls | grep pts | gawk '{ split($1, x, "."); print x[1] }' | while read i; do gnome-terminal -e screen\ -dx\ $i; done"
 
-alias sshaws="ssh -i $AWS_DEPLOY_KEY"
-alias scpaws="scp -i $AWS_DEPLOY_KEY"
-
 alias lex="screen -c .screenrc-lex"
-alias ssheci="ssh jordonst@10.180.131.184"
 
 alias flushdns='sudo killall -HUP mDNSResponder'
 alias flush-dns='sudo killall -HUP mDNSResponder'
 
 alias tugboat='nocorrect tugboat'
+alias grunt='nocorrect grunt'

@@ -1,18 +1,20 @@
-
 if [[ $IS_MAC -eq 1 ]]; then
-#    export EDITOR='mvim'
-    export EDITOR='vim'
+    export EDITOR='mvim'
 else
     export EDITOR='vim'
 fi
-if [ -f ~/.zsh/my-prompt.sh ]; then
-    source ~/.zsh/my-prompt.sh
-fi
- 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.zsh/aliases, instead of adding them here directly.
 
+# setup the prompts
+if [ -f ~/.zsh/base-prompt.sh ]; then
+    source ~/.zsh/base-prompt.sh
+fi
+
+if [ -f ~/.zsh/multi-line-prompt.sh ]; then
+    # uncomment to use the multi-line prompt
+    #source ~/.zsh/multi-line-prompt.sh
+fi
+  
+# alias definitions.
 if [ -f ~/.zsh/aliases ]; then
     source ~/.zsh/aliases
 fi
@@ -20,7 +22,5 @@ fi
 chpwd() {
     update_terminal_cwd
 }
-
-path+=( $HOME/git/ocx/ocx-dev/scripts ) 
 
 ulimit -n 8192
