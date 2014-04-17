@@ -11,7 +11,7 @@ There is really not much to say about this, just clone the repo.
 
 ### Step 2 - Execute the install script
 Running the install script should perform all the steps necessary to get my zsh scripts up and running.
-It works for me, but a make no guarantees you'll have the same success.  If not, see the Manual Install section.
+It works for me, but I make no guarantees that you will have the same success.  If not, see the Manual Install section.
 ```bash
 zsh/install.sh
 ```
