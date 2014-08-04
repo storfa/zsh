@@ -1,14 +1,14 @@
 # make sure /usr/loca/bin occurs before /usr/bin in the path
-PATH="/usr/local/bin:$PATH"
+PATH="$HOME/gocode/bin:/usr/local/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set Environment variables
-export AWS_DEPLOY_KEY=~/git/ec2-aws-deploy/awsdeploy_python_module/conf/awsdeploy_key.pem
-
+# export the gopath env variable
+export GOPATH=$HOME/gocode
+ 
 # When using MacVim (or GVim) as $VISUAL or $EDITOR, you should be 
 # aware that by default MacVim will fork a new process from the parent, resulting in the 
 # MacVim return value not reaching the parent process. This may confuse other applications, 
