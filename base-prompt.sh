@@ -9,7 +9,7 @@
 source ~/.zsh/zshuery/zshuery.sh
 load_defaults
 load_aliases
-load_lol_aliases
+#load_lol_aliases
 load_completion ~/.zsh/zshuery/completion
 load_correction
 
@@ -28,4 +28,4 @@ source ~/.zsh/git-prompt/zshrc.sh
 # #######################################################################################
 # set the default prompts
 # #######################################################################################
-prompts '%{$fg[green]%}$(COLLAPSED_DIR)%{$reset_color%} $(git_super_status)%{$fg[yellow]%}$(prompt_char $)%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+prompts '%{$fg[green]%}${PWD/#$HOME/~}%{$reset_color%} $(git_super_status)%{$fg[yellow]%}$(prompt_char $)%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
