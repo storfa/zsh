@@ -24,3 +24,12 @@ chpwd() {
 }
 
 ulimit -n 8192
+
+#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# => Key Bindings
+#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if [[ $IS_MAC -eq 1 ]]; then
+    # this works better on my Mac
+    bindkey '^[[H' beginning-of-line
+    bindkey '^[[F' end-of-line
+fi
